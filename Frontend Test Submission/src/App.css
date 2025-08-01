@@ -1,0 +1,73 @@
+/* src/App.css */
+
+/* Import Montserrat and Roboto fonts (for best results, also add the link to public/index.html) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap');
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  transition: background 0.4s;
+}
+
+body {
+  color: #222;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #1976d2;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+/* Glassmorphism utility class (if you want to use it in other components) */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Animations for entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .glass {
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  html, body {
+    font-size: 16px;
+  }
+}
+
